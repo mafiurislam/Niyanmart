@@ -1,5 +1,5 @@
 -- NAYAN MART - E-Commerce Database Dump for Hostinger MySQL / phpMyAdmin
--- Generated: 2026-09-21 13:09:37
+-- Generated: 2026-09-21 19:44:40
 -- Brand: Nayan Mart (আপনার ঘরের বাজার, এখন হাতের মুঠোয়)
 
 SET SQL_MODE = 'NO_AUTO_VALUE_ON_ZERO';
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 -- Dumping data for table `users`
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `role`, `address`, `city`, `state`, `pincode`, `status`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Nayan Mart Admin', 'admin@nayanmart.com', 7550807912, 'admin', 'Admin Office, Nayan Mart', 'Kolkata', 'West Bengal', 700001, 'active', NULL, '$2y$12$MBO.o/55Cb.JRSdGlAxdQuFR9s7vVp26uRE1jLxYzVXqvhoomqH1G', NULL, '2026-09-21 13:08:42', '2026-09-21 13:08:42'),
+(1, 'Nayan Mart Admin', 'admin@nayanmart.com', 7550807912, 'admin', 'Admin Office, Nayan Mart', 'Kolkata', 'West Bengal', 700001, 'active', NULL, '$2y$12$MBO.o/55Cb.JRSdGlAxdQuFR9s7vVp26uRE1jLxYzVXqvhoomqH1G', 'QMT8y3hTHz75Lojaqrvnv63ZodHytTAixg9nRmtTOLzGL9ukckAHFyx7IYbq', '2026-09-21 13:08:42', '2026-09-21 13:08:42'),
 (2, 'Mafiur Islam', 'skrousonali2024@gmail.com', 9382559266, 'customer', 'Ashoknagar, kalyangarh, bhatchhala Saitul chicken shop', 'Delhi', 'West Bengal', 743263, 'active', NULL, '$2y$12$JD6lFbUQH1ZLt2JcDNP7GOSO6XBMOpkNta.0QovVNjZ7P9eAwiqLC', NULL, '2026-09-21 13:08:42', '2026-09-21 13:08:42');
 
 -- --------------------------------------------------------
@@ -179,8 +179,8 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 -- Dumping data for table `products`
 INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `name`, `name_bn`, `slug`, `brand`, `sku`, `description`, `specifications`, `mrp`, `selling_price`, `discount_percent`, `weight`, `unit`, `stock`, `min_order_qty`, `max_order_qty`, `image`, `badge`, `is_featured`, `is_best_seller`, `is_new_arrival`, `is_active`, `rating`, `reviews_count`, `created_at`, `updated_at`) VALUES
-(1, 12, NULL, 'Mother Dairy Curd', 'মাদার ডেইরি দই', 'mother-dairy-curd', 'Mother Dairy', 'NMCE644D00', 'Mother Dairy Mother Dairy Curd - 400 g / 500 g. Premium quality grocery product from Nayan Mart. Made from pasteurized toned milk, thick, creamy and delicious. Rich in probiotics for good gut health.', 'Brand: Mother Dairy\nQuantity: 500 g\nIngredients: Pasteurized Toned Milk, Active Culture\nStorage: Keep refrigerated at 4°C or below\nShelf Life: 15 Days', 56, 50, 11, '500 g', 'g', 85, 1, 20, '/assets/images/products/mother-dairy-curd.png', '11% OFF', 1, 1, 0, 1, 4, 125, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(2, 12, NULL, 'Amul Butter', 'আমুল মাখন', 'amul-butter', 'Amul', 'NMBF3B1B66', 'Utterly Butterly Delicious Amul Butter! Made with pure fresh cream from cows and buffaloes. Great on toasted bread, in parathas, and cooking.', 'Brand: Amul\nWeight: 100 g\nMilk Fat: 80%\nMoisture: 16%\nSalt: 3%', 58, 52, 10, '100 g', 'g', 120, 1, 20, '/assets/images/products/amul-butter.png', '10% OFF', 1, 1, 0, 1, 3.9, 88, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
+(1, 12, NULL, 'Mother Dairy Curd', 'মাদার ডেইরি দই', 'mother-dairy-curd', 'Mother Dairy', 'NMCE644D00', 'Mother Dairy Mother Dairy Curd - 400 g / 500 g. Premium quality grocery product from Nayan Mart. Made from pasteurized toned milk, thick, creamy and delicious. Rich in probiotics for good gut health.', 'Brand: Mother Dairy\nQuantity: 500 g\nIngredients: Pasteurized Toned Milk, Active Culture\nStorage: Keep refrigerated at 4°C or below\nShelf Life: 15 Days', 56, 50, 11, '500 g', 'g', 84, 1, 20, '/assets/images/products/mother-dairy-curd.png', '11% OFF', 1, 1, 0, 1, 4, 125, '2026-09-21 13:08:43', '2026-09-21 14:04:07'),
+(2, 12, NULL, 'Amul Butter', 'আমুল মাখন', 'amul-butter', 'Amul', 'NMBF3B1B66', 'Utterly Butterly Delicious Amul Butter! Made with pure fresh cream from cows and buffaloes. Great on toasted bread, in parathas, and cooking.', 'Brand: Amul\nWeight: 100 g\nMilk Fat: 80%\nMoisture: 16%\nSalt: 3%', 58, 52, 10, '100 g', 'g', 119, 1, 20, '/assets/images/products/amul-butter.png', '10% OFF', 1, 1, 0, 1, 3.9, 88, '2026-09-21 13:08:43', '2026-09-21 14:57:43'),
 (3, 12, NULL, 'Paneer Fresh', 'তাজা পনির', 'paneer-fresh', 'Amul', 'NM7DCCB935', 'Soft, moist and fresh dairy paneer cottage cheese. Perfect for matar paneer, shahi paneer, or frying for snacks.', 'Brand: Amul Fresh\nWeight: 200 g\nSource: Cow & Buffalo Milk\nRefrigerate: Yes', 95, 85, 11, '200 g', 'g', 60, 1, 20, '/assets/images/products/paneer-fresh.png', '11% OFF', 1, 0, 1, 1, 4.6, 42, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
 (4, 12, NULL, 'Fresh Milk Toned', 'তাজা টোনড দুধ', 'fresh-milk-toned', 'Mother Dairy', 'NM4FCE1C5F', 'Fresh pasteurized toned milk with 3.0% Fat and 8.5% SNF. Wholesome and nourishing for the whole family.', 'Volume: 500 ml\nFat: 3.0%\nSNF: 8.5%\nFortified with Vitamin A & D', 28, 25, 11, '500 ml', 'ml', 150, 1, 20, '/assets/images/products/fresh-milk.png', '11% OFF', 1, 1, 0, 1, 4.4, 95, '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
 (5, 12, NULL, 'Amul Cheese Slices', 'আমুল চিজ স্লাইস', 'amul-cheese-slices', 'Amul', 'NME9932C3D', 'Individually wrapped processed cheese slices. Melts deliciously on burgers, sandwiches, and toasts.', 'Slices: 10 Slices\nWeight: 200 g\nBrand: Amul', 145, 129, 11, '200 g', 'g', 70, 1, 20, '/assets/images/products/amul-cheese.png', '11% OFF', 1, 0, 0, 1, 5, 60, '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
@@ -220,6 +220,50 @@ CREATE TABLE IF NOT EXISTS `product_images` (
   KEY `product_images_product_id_foreign` (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Dumping data for table `product_images`
+INSERT INTO `product_images` (`id`, `product_id`, `image_path`, `sort_order`, `created_at`, `updated_at`) VALUES
+(1, 1, '/assets/images/products/mother-dairy-curd.png', 1, '2026-09-21 14:46:02', '2026-09-21 14:46:02'),
+(2, 1, '/assets/images/products/mother-dairy-curd-100g.png', 2, '2026-09-21 14:46:02', '2026-09-21 14:46:02'),
+(3, 1, '/assets/images/products/mother-dairy-curd-200g.png', 3, '2026-09-21 14:46:02', '2026-09-21 14:46:02'),
+(4, 1, '/assets/images/products/mother-dairy-curd-500g.png', 4, '2026-09-21 14:46:02', '2026-09-21 14:46:02'),
+(5, 1, '/assets/images/products/mother-dairy-curd-1kg.png', 5, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(6, 1, '/assets/images/products/mother-dairy-curd-2kg.png', 6, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(7, 1, '/assets/images/products/mother-dairy-curd-3kg.png', 7, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(8, 2, '/assets/images/products/amul-butter.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(9, 2, '/assets/images/products/amul-butter-100g.png', 2, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(10, 2, '/assets/images/products/amul-butter-500g.png', 3, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(11, 3, '/assets/images/products/paneer-fresh.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(12, 3, '/assets/images/products/paneer-fresh-200g.png', 2, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(13, 3, '/assets/images/products/paneer-fresh-500g.png', 3, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(14, 4, '/assets/images/products/fresh-milk.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(15, 5, '/assets/images/products/amul-cheese.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(16, 6, '/assets/images/products/frooti.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(17, 7, '/assets/images/products/real-juice.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(18, 8, '/assets/images/products/limca.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(19, 9, '/assets/images/products/pepsi.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(20, 10, '/assets/images/products/eggs.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(21, 11, '/assets/images/products/colgate.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(22, 12, '/assets/images/products/parle-g.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(23, 13, '/assets/images/products/surf-excel.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(24, 14, '/assets/images/products/maggi.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(25, 15, '/assets/images/products/fortune-oil.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(26, 15, '/assets/images/products/fortune-oil-1l.png', 2, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(27, 15, '/assets/images/products/fortune-oil-5l.png', 3, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(28, 16, '/assets/images/products/pampers.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(29, 17, '/assets/images/products/tata-tea.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(30, 18, '/assets/images/products/sugar.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(31, 19, '/assets/images/products/aashirvaad-atta.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(32, 19, '/assets/images/products/aashirvaad-atta-1kg.png', 2, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(33, 19, '/assets/images/products/aashirvaad-atta-5kg.png', 3, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(34, 19, '/assets/images/products/aashirvaad-atta-10kg.png', 4, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(35, 20, '/assets/images/products/garam-masala.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(36, 21, '/assets/images/products/tang.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(37, 22, '/assets/images/products/gillette.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(38, 23, '/assets/images/products/nivea.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(39, 24, '/assets/images/products/domex.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(40, 25, '/assets/images/products/lactogen.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03'),
+(41, 26, '/assets/images/products/haldiram.png', 1, '2026-09-21 14:46:03', '2026-09-21 14:46:03');
+
 -- --------------------------------------------------------
 -- Table structure for table `product_variants`
 -- --------------------------------------------------------
@@ -239,22 +283,22 @@ CREATE TABLE IF NOT EXISTS `product_variants` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table `product_variants`
-INSERT INTO `product_variants` (`id`, `product_id`, `weight`, `unit`, `mrp`, `selling_price`, `stock`, `is_default`, `created_at`, `updated_at`) VALUES
-(1, 1, '100 g', 'g', 15, 12, 40, 0, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(2, 1, '200 g', 'g', 28, 25, 50, 0, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(3, 1, '500 g', 'g', 56, 50, 85, 1, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(4, 1, '1 Kg', 'g', 110, 98, 30, 0, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(5, 1, '2 Kg', 'g', 210, 190, 15, 0, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(6, 1, '3 Kg', 'g', 310, 280, 10, 0, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(7, 2, '100 g', 'g', 58, 52, 120, 1, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(8, 2, '500 g', 'g', 285, 265, 45, 0, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(9, 3, '200 g', 'g', 95, 85, 60, 1, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(10, 3, '500 g', 'g', 230, 205, 25, 0, '2026-09-21 13:08:43', '2026-09-21 13:08:43'),
-(11, 15, '1 L', 'g', 155, 138, 100, 1, '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
-(12, 15, '5 L Jar', 'g', 760, 670, 30, 0, '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
-(13, 19, '1 kg', 'g', 55, 49, 80, 0, '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
-(14, 19, '5 kg', 'g', 260, 230, 110, 1, '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
-(15, 19, '10 kg', 'g', 510, 450, 50, 0, '2026-09-21 13:08:44', '2026-09-21 13:08:44');
+INSERT INTO `product_variants` (`id`, `product_id`, `weight`, `unit`, `mrp`, `selling_price`, `stock`, `is_default`, `created_at`, `updated_at`, `image`) VALUES
+(1, 1, '100 g', 'g', 15, 12, 40, 0, '2026-09-21 13:08:43', '2026-09-21 14:46:01', '/assets/images/products/mother-dairy-curd-100g.png'),
+(2, 1, '200 g', 'g', 28, 25, 50, 0, '2026-09-21 13:08:43', '2026-09-21 14:46:01', '/assets/images/products/mother-dairy-curd-200g.png'),
+(3, 1, '500 g', 'g', 56, 50, 85, 1, '2026-09-21 13:08:43', '2026-09-21 14:46:02', '/assets/images/products/mother-dairy-curd-500g.png'),
+(4, 1, '1 Kg', 'g', 110, 98, 30, 0, '2026-09-21 13:08:43', '2026-09-21 14:46:02', '/assets/images/products/mother-dairy-curd-1kg.png'),
+(5, 1, '2 Kg', 'g', 210, 190, 15, 0, '2026-09-21 13:08:43', '2026-09-21 14:46:02', '/assets/images/products/mother-dairy-curd-2kg.png'),
+(6, 1, '3 Kg', 'g', 310, 280, 10, 0, '2026-09-21 13:08:43', '2026-09-21 14:46:02', '/assets/images/products/mother-dairy-curd-3kg.png'),
+(7, 2, '100 g', 'g', 58, 52, 120, 1, '2026-09-21 13:08:43', '2026-09-21 14:46:02', '/assets/images/products/amul-butter-100g.png'),
+(8, 2, '500 g', 'g', 285, 265, 45, 0, '2026-09-21 13:08:43', '2026-09-21 14:46:02', '/assets/images/products/amul-butter-500g.png'),
+(9, 3, '200 g', 'g', 95, 85, 60, 1, '2026-09-21 13:08:43', '2026-09-21 14:46:02', '/assets/images/products/paneer-fresh-200g.png'),
+(10, 3, '500 g', 'g', 230, 205, 25, 0, '2026-09-21 13:08:43', '2026-09-21 14:46:02', '/assets/images/products/paneer-fresh-500g.png'),
+(11, 15, '1 L', 'g', 155, 138, 100, 1, '2026-09-21 13:08:44', '2026-09-21 14:46:02', '/assets/images/products/fortune-oil-1l.png'),
+(12, 15, '5 L Jar', 'g', 760, 670, 30, 0, '2026-09-21 13:08:44', '2026-09-21 14:46:02', '/assets/images/products/fortune-oil-5l.png'),
+(13, 19, '1 kg', 'g', 55, 49, 80, 0, '2026-09-21 13:08:44', '2026-09-21 14:46:02', '/assets/images/products/aashirvaad-atta-1kg.png'),
+(14, 19, '5 kg', 'g', 260, 230, 110, 1, '2026-09-21 13:08:44', '2026-09-21 14:46:02', '/assets/images/products/aashirvaad-atta-5kg.png'),
+(15, 19, '10 kg', 'g', 510, 450, 50, 0, '2026-09-21 13:08:44', '2026-09-21 14:46:02', '/assets/images/products/aashirvaad-atta-10kg.png');
 
 -- --------------------------------------------------------
 -- Table structure for table `orders`
@@ -292,7 +336,9 @@ CREATE TABLE IF NOT EXISTS `orders` (
 
 -- Dumping data for table `orders`
 INSERT INTO `orders` (`id`, `order_number`, `user_id`, `customer_name`, `customer_phone`, `customer_email`, `house_flat`, `street_area`, `city`, `state`, `pincode`, `landmark`, `address_type`, `subtotal`, `discount`, `coupon_code`, `delivery_charge`, `total`, `payment_method`, `payment_status`, `transaction_id`, `order_status`, `notes`, `expected_delivery_date`, `created_at`, `updated_at`) VALUES
-(1, 'NM94821670', 2, 'Mafiur Islam', 9382559266, 'skrousonali2024@gmail.com', 'Saitul chicken shop', 'Ashoknagar, kalyangarh, bhatchhala', 'Delhi', 'West Bengal', 743263, 'Near Rail Gate', 'Home', 112, 0, NULL, 0, 112, 'cod', 'pending', 'TR747B1AD5', 'placed', 'Deliver before 7 PM please.', '2026-09-25 13:08:44', '2026-09-21 13:08:44', '2026-09-21 13:08:44');
+(1, 'NM94821670', 2, 'Mafiur Islam', 9382559266, 'skrousonali2024@gmail.com', 'Saitul chicken shop', 'Ashoknagar, kalyangarh, bhatchhala', 'Delhi', 'West Bengal', 743263, 'Near Rail Gate', 'Home', 112, 0, NULL, 0, 112, 'cod', 'pending', 'TR747B1AD5', 'placed', 'Deliver before 7 PM please.', '2026-09-25 13:08:44', '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
+(2, 'NM62114507', NULL, 'gjhgcgc', 5524255555, NULL, NULL, 'rdyfy', 'Kolkata', 'West Bengal', 743263, NULL, 'Home', 50, 0, NULL, 30, 80, 'cod', 'processing', 'TR75CNTJCN', 'confirmed', NULL, '2026-09-23 14:04:07', '2026-09-21 14:04:07', '2026-09-21 15:38:30'),
+(3, 'NM21032971', NULL, 'Mafiur Islam', 09382559266, 'mafiurislam366@gmail.com', NULL, 'Ashoknagar, kalyangarh, bhatchhala Saiful chicken shop', 'Kolkata', 'West Bengal', 743263, NULL, 'Home', 52, 0, NULL, 30, 82, 'razorpay', 'paid', 'pay_TejBTlfXF0GLKo', 'placed', NULL, '2026-09-23 14:57:43', '2026-09-21 14:57:43', '2026-09-21 14:57:43');
 
 -- --------------------------------------------------------
 -- Table structure for table `order_items`
@@ -316,7 +362,9 @@ CREATE TABLE IF NOT EXISTS `order_items` (
 -- Dumping data for table `order_items`
 INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `product_name`, `product_image`, `weight`, `price`, `quantity`, `subtotal`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 'Mother Dairy Curd', '/assets/images/products/mother-dairy-curd.png', '500 g', 50, 1, 50, '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
-(2, 1, 20, 'Aashirvaad Shahi Garam Masala', '/assets/images/products/garam-masala.png', '100 g', 62, 1, 62, '2026-09-21 13:08:44', '2026-09-21 13:08:44');
+(2, 1, 20, 'Aashirvaad Shahi Garam Masala', '/assets/images/products/garam-masala.png', '100 g', 62, 1, 62, '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
+(3, 2, 1, 'Mother Dairy Curd', '/assets/images/products/mother-dairy-curd.png', '500 g', 50, 1, 50, '2026-09-21 14:04:07', '2026-09-21 14:04:07'),
+(4, 3, 2, 'Amul Butter', '/assets/images/products/amul-butter.png', '100 g', 52, 1, 52, '2026-09-21 14:57:43', '2026-09-21 14:57:43');
 
 -- --------------------------------------------------------
 -- Table structure for table `order_trackings`
@@ -336,7 +384,10 @@ CREATE TABLE IF NOT EXISTS `order_trackings` (
 
 -- Dumping data for table `order_trackings`
 INSERT INTO `order_trackings` (`id`, `order_id`, `status`, `title`, `description`, `tracked_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'placed', 'Order Placed', 'Your order has been received and is waiting for confirmation.', '2026-09-21 12:53:44', '2026-09-21 13:08:44', '2026-09-21 13:08:44');
+(1, 1, 'placed', 'Order Placed', 'Your order has been received and is waiting for confirmation.', '2026-09-21 12:53:44', '2026-09-21 13:08:44', '2026-09-21 13:08:44'),
+(2, 2, 'placed', 'Order Placed', 'Your order has been received and is being verified by our team.', '2026-09-21 14:04:07', '2026-09-21 14:04:07', '2026-09-21 14:04:07'),
+(3, 3, 'placed', 'Order Placed', 'Your order has been received and is being verified by our team.', '2026-09-21 14:57:43', '2026-09-21 14:57:43', '2026-09-21 14:57:43'),
+(4, 2, 'confirmed', 'Order Confirmed', 'Status updated to Order Confirmed', '2026-09-21 15:38:07', '2026-09-21 15:38:07', '2026-09-21 15:38:07');
 
 -- --------------------------------------------------------
 -- Table structure for table `coupons`
@@ -496,6 +547,7 @@ INSERT INTO `settings` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (8, 'standard_delivery_fee', 30, '2026-09-21 13:08:41', '2026-09-21 13:08:41'),
 (9, 'upi_id', '7550807912@paytm', '2026-09-21 13:08:41', '2026-09-21 13:08:41'),
 (10, 'upi_name', 'NAYAN MART', '2026-09-21 13:08:41', '2026-09-21 13:08:41'),
-(11, 'currency_symbol', '₹', '2026-09-21 13:08:41', '2026-09-21 13:08:41');
+(11, 'currency_symbol', '₹', '2026-09-21 13:08:41', '2026-09-21 13:08:41'),
+(12, 'razorpay_key', 'rzp_test_Tei5KSLqOMs25b', '2026-09-21 14:48:50', '2026-09-21 14:48:50');
 
 COMMIT;

@@ -2493,3 +2493,191 @@ html, body {
   }
 }
 
+/* ==========================================================================
+   Pagination Component (Responsive & Modern)
+   ========================================================================== */
+.custom-pagination,
+nav[role="navigation"].custom-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 32px 0 16px;
+  padding: 14px 20px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.custom-pagination.custom-pagination-simple {
+  justify-content: center;
+}
+
+.pagination-info {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination-highlight {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.pagination-list,
+ul.pagination {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pagination-list .page-item,
+ul.pagination .page-item {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+}
+
+.pagination-list .page-link,
+ul.pagination .page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  line-height: 1;
+}
+
+.pagination-list .page-link:hover,
+ul.pagination .page-link:hover {
+  background: var(--primary-subtle);
+  color: var(--primary);
+  border-color: var(--primary-border);
+  box-shadow: 0 2px 4px rgba(15, 122, 63, 0.12);
+  transform: translateY(-1px);
+}
+
+.pagination-list .page-item.active .page-link,
+ul.pagination .page-item.active .page-link,
+.page-link.active {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(15, 122, 63, 0.35);
+  pointer-events: none;
+}
+
+.pagination-list .page-item.disabled .page-link,
+ul.pagination .page-item.disabled .page-link,
+.page-link[aria-disabled="true"] {
+  background: #f8fafc !important;
+  color: #94a3b8 !important;
+  border-color: var(--border-light) !important;
+  cursor: not-allowed;
+  opacity: 0.65;
+  pointer-events: none;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.page-link-prev,
+.page-link-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+}
+
+.page-link-prev i,
+.page-link-next i {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.page-link-dots {
+  border: none !important;
+  background: transparent !important;
+  color: var(--text-muted) !important;
+  cursor: default !important;
+  min-width: 24px !important;
+  padding: 0 4px !important;
+  box-shadow: none !important;
+}
+
+/* Fallback & SVG sizing safeguard to prevent runaway icon dimensions */
+nav[role="navigation"] svg,
+.custom-pagination svg,
+.pagination svg,
+.page-link svg,
+svg.w-5 {
+  width: 16px !important;
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.w-5 { width: 1.25rem !important; }
+.h-5 { height: 1.25rem !important; }
+
+@media (max-width: 640px) {
+  .custom-pagination,
+  nav[role="navigation"].custom-pagination {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 12px 10px;
+    margin: 24px 0 12px;
+  }
+
+  .pagination-info {
+    font-size: 12.5px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pagination-list,
+  ul.pagination {
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .pagination-list .page-link,
+  ul.pagination .page-link {
+    min-width: 34px;
+    height: 34px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  .page-link-prev,
+  .page-link-next {
+    padding: 0 10px !important;
+    font-size: 12px !important;
+  }
+}
+

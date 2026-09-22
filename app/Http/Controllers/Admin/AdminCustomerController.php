@@ -21,7 +21,7 @@ class AdminCustomerController extends Controller
             });
         }
 
-        $customers = $query->orderBy('created_at', 'desc')->paginate(15);
+        $customers = $query->orderBy('created_at', 'desc')->paginate(15)->withQueryString();
 
         return view('admin.customers.index', compact('customers'));
     }

@@ -35,7 +35,8 @@ class ProductController extends Controller
 
         $products = Product::where('category_id', $category->id)
             ->where('is_active', true)
-            ->paginate(16);
+            ->paginate(16)
+            ->withQueryString();
 
         return view('frontend.category', compact('category', 'products'));
     }

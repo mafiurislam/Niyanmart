@@ -101,7 +101,8 @@ class CustomerController extends Controller
         $orders = Order::where('user_id', $user->id)
             ->with('items')
             ->orderBy('created_at', 'desc')
-            ->paginate(10);
+            ->paginate(10)
+            ->withQueryString();
 
         return view('frontend.account.orders', compact('orders'));
     }

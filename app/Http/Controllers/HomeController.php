@@ -149,7 +149,8 @@ class HomeController extends Controller
         $discountProducts = Product::where('is_active', true)
             ->where('discount_percent', '>=', 10)
             ->orderBy('discount_percent', 'desc')
-            ->paginate(16);
+            ->paginate(16)
+            ->withQueryString();
 
         return view('frontend.offers', compact('discountProducts'));
     }
@@ -158,7 +159,8 @@ class HomeController extends Controller
     {
         $products = Product::where('is_active', true)
             ->where('is_best_seller', true)
-            ->paginate(16);
+            ->paginate(16)
+            ->withQueryString();
 
         return view('frontend.best_sellers', compact('products'));
     }
@@ -167,7 +169,8 @@ class HomeController extends Controller
     {
         $products = Product::where('is_active', true)
             ->where('is_new_arrival', true)
-            ->paginate(16);
+            ->paginate(16)
+            ->withQueryString();
 
         return view('frontend.new_arrivals', compact('products'));
     }

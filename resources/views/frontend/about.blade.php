@@ -14,8 +14,13 @@
 
   <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 40px; margin-bottom: 36px;">
     <div style="max-width: 800px; margin: 0 auto;">
-      <span style="color: var(--primary); font-weight: 800; font-size: 13px; text-transform: uppercase;">About Nayan Mart</span>
-      <h1 style="font-size: 32px; font-weight: 800; color: #0f172a; margin: 6px 0 16px;">“আপনার ঘরের বাজার, এখন হাতের মুঠোয়”</h1>
+      <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+        <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart Official Logo" style="width: 90px; height: 90px; object-fit: contain; border-radius: 50%; box-shadow: 0 4px 18px rgba(15, 122, 63, 0.2); flex-shrink: 0;">
+        <div>
+          <span style="color: var(--primary); font-weight: 800; font-size: 13px; text-transform: uppercase;">About Nayan Mart</span>
+          <h1 style="font-size: 32px; font-weight: 800; color: #0f172a; margin: 4px 0 6px;">“আপনার প্রতিদিনের বাজার, এখন হাতের মুঠোয়”</h1>
+        </div>
+      </div>
       <p style="font-size: 16px; color: #475569; line-height: 1.8; margin-bottom: 24px;">
         Welcome to <strong>NAYAN MART</strong>! We are dedicated to providing fresh, high-quality groceries, dairy, cooking oils, grains, packaged snacks, and everyday household essentials delivered quickly to your doorstep.
       </p>

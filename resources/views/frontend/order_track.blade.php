@@ -17,9 +17,9 @@
   @if(!$order)
     <!-- Order Lookup Form if no order found or accessing blank -->
     <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 40px; max-width: 540px; margin: 0 auto 40px; text-align: center;">
-      <i class="bi bi-search" style="font-size: 40px; color: var(--primary); margin-bottom: 12px; display: block;"></i>
-      <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Enter Order ID to Track</h3>
-      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">You can find your Order ID in your order confirmation email or receipt (e.g. NM94821670).</p>
+      <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" style="width: 70px; height: 70px; object-fit: contain; border-radius: 50%; margin: 0 auto 16px; display: block; box-shadow: 0 4px 14px rgba(15, 122, 63, 0.16);">
+      <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">Enter Order ID to Track</h3>
+      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">“আপনার প্রতিদিনের বাজার” • Check real-time packing & delivery progress.</p>
       
       <form action="{{ route('order.track') }}" method="GET">
         <div style="display: flex; gap: 8px; margin-bottom: 12px;">

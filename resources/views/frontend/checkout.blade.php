@@ -275,7 +275,7 @@
         currency: "INR",
         name: "{{ \App\Models\Setting::get('site_name', 'Nayan Mart') }}",
         description: "Order Payment ({{ count($cart) }} Items)",
-        image: "{{ asset('assets/images/logo.svg') }}",
+        image: "{{ asset('assets/images/logo.png') }}",
         prefill: {
           name: custName,
           email: custEmail,

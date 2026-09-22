@@ -9,12 +9,15 @@
   <section class="hero-section">
     <div class="hero-banner-card">
       <div class="hero-content">
-        <span class="hero-badge">
-          <i class="bi bi-patch-check-fill"></i>
-          <span>Your Trusted Online Grocery Store</span>
-        </span>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap;">
+          <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" style="width: 58px; height: 58px; object-fit: contain; border-radius: 50%; box-shadow: 0 4px 12px rgba(15, 122, 63, 0.2); background: #ffffff; padding: 2px;">
+          <span class="hero-badge" style="margin: 0;">
+            <i class="bi bi-patch-check-fill"></i>
+            <span>Your Trusted Online Grocery Store</span>
+          </span>
+        </div>
         <h1 class="hero-title">Nayan Mart</h1>
-        <div class="hero-tagline-bn">“আপনার ঘরের বাজার, এখন হাতের মুঠোয়”</div>
+        <div class="hero-tagline-bn">“আপনার প্রতিদিনের বাজার, এখন হাতের মুঠোয়”</div>
         <p class="hero-subtitle">Quality Products • Best Price • Fast Delivery</p>
 
         <!-- Feature Pills -->

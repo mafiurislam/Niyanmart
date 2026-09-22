@@ -11,7 +11,8 @@
   <meta name="description" content="@yield('meta_description', 'Nayan Mart delivers fresh groceries, daily essentials, flours, oils, milk, and household goods right to your doorstep with superfast delivery and best prices.')">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="{{ asset('assets/images/logo.svg') }}">
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
+  <link rel="apple-touch-icon" href="{{ asset('assets/images/logo.png') }}">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
@@ -44,7 +45,11 @@
       </button>
 
       <a href="{{ route('home') }}" class="mobile-logo-brand">
-        <img src="{{ asset('assets/images/logo.svg') }}" alt="Nayan Mart">
+        <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" width="40" height="40">
+        <div>
+          <span class="mobile-logo-title">Nayan Mart</span>
+          <span class="mobile-logo-tagline">আপনার প্রতিদিনের বাজার</span>
+        </div>
       </a>
 
       <div class="mobile-header-actions">
@@ -91,7 +96,11 @@
     <div class="container header-inner">
       <!-- Logo -->
       <a href="{{ route('home') }}" class="logo-brand">
-        <img src="{{ asset('assets/images/logo.svg') }}" alt="Nayan Mart Logo">
+        <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" class="site-logo-img" width="52" height="52">
+        <div class="logo-brand-info">
+          <span class="logo-brand-title">Nayan Mart</span>
+          <span class="logo-brand-tagline">আপনার প্রতিদিনের বাজার</span>
+        </div>
       </a>
 
       <!-- Search with Live Autocomplete -->
@@ -424,13 +433,13 @@
       <div class="footer-main-grid">
         <!-- Brand Info -->
         <div class="footer-col">
-          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
-            <div style="width: 38px; height: 38px; border-radius: 8px; background: #ffffff; display: flex; align-items: center; justify-content: center;">
-              <i class="bi bi-cart4" style="color: #0f7a3f; font-size: 22px;"></i>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: #ffffff; padding: 2px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2); flex-shrink: 0;">
+              <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
             </div>
             <div>
-              <h3 style="color: #ffffff; font-size: 20px; font-weight: 800; line-height: 1;">Nayan Mart</h3>
-              <p style="color: #cbd5e1; font-size: 11px;">“আপনার ঘরের বাজার, এখন হাতের মুঠোয়”</p>
+              <h3 style="color: #ffffff; font-size: 20px; font-weight: 800; line-height: 1.1;">Nayan Mart</h3>
+              <p style="color: #cbd5e1; font-size: 11px;">“আপনার প্রতিদিনের বাজার, এখন হাতের মুঠোয়”</p>
             </div>
           </div>
           <p style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin-bottom: 18px;">

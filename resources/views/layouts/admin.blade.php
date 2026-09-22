@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>@yield('title', 'Admin Dashboard – Nayan Mart')</title>
-  <link rel="icon" type="image/svg+xml" href="{{ asset('assets/images/logo.svg') }}">
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
+  <link rel="apple-touch-icon" href="{{ asset('assets/images/logo.png') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
   <style>
     .admin-table-wrap { background: #fff; border: 1px solid var(--border-color); border-radius: 10px; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 24px; }
@@ -51,11 +52,11 @@
   <aside class="admin-sidebar" id="admin-sidebar">
     <div class="admin-sidebar-header" style="display: flex; align-items: center; justify-content: space-between;">
       <div style="display: flex; align-items: center; gap: 12px;">
-        <div style="width: 38px; height: 38px; border-radius: 8px; background: #ffffff; display: flex; align-items: center; justify-content: center;">
-          <i class="bi bi-cart4" style="color: #0f7a3f; font-size: 20px;"></i>
+        <div style="width: 44px; height: 44px; border-radius: 50%; background: #ffffff; padding: 2px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.25); flex-shrink: 0;">
+          <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
         </div>
         <div>
-          <h3 style="font-size: 17px; font-weight: 800; color: #fff; line-height: 1;">Nayan Mart</h3>
+          <h3 style="font-size: 17px; font-weight: 800; color: #fff; line-height: 1.1;">Nayan Mart</h3>
           <span style="font-size: 11px; color: #bbf7d0;">Admin Portal</span>
         </div>
       </div>

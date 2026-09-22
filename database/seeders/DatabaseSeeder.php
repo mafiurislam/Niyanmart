@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         // 1. Settings
         $settings = [
             'site_name' => 'Nayan Mart',
-            'tagline' => 'আপনার ঘরের বাজার, এখন হাতের মুঠোয়',
+            'tagline' => 'আপনার প্রতিদিনের বাজার',
             'sub_tagline' => 'Quality Products • Best Price • Fast Delivery',
             'phone' => '7550807912',
             'email' => 'skrousonali2024@gmail.com',

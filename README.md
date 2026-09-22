@@ -1,66 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Nayan Mart (নয়ন মার্ট) - Online Grocery & Daily Essentials
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **আপনার ঘরের বাজার, এখন হাতের মুঠোয়**  
+> Fast, reliable hyper-local e-commerce store built with **Laravel 11** and powered exclusively by **SQLite**.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Key Highlights & Architecture
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Database Engine**: **100% SQLite** (`database/database.sqlite`).
+- **No External Database Server Required**: No MySQL, MariaDB, PostgreSQL, or external DB setup needed.
+- **Hostinger Compatible**: Fully compatible with Hostinger PHP Web Hosting.
+- **Full E-Commerce Suite**:
+  - Customer & Administrator Authentication
+  - Product Catalog with Variants, Images, Badges, and Stock Control
+  - Multi-level Categories & Subcategories
+  - Session Cart with Instant Item Updates
+  - Coupons & Discount Rules (Percent & Fixed Amount)
+  - Seamless Checkout (Cash on Delivery & Razorpay / UPI ready)
+  - Real-time Order Tracking (Placed, Confirmed, Packed, Out for Delivery, Delivered)
+  - Delivery PIN Code Checker with customizable delivery zones & charges
+  - Product Reviews & Ratings calculation
+  - Customer Wishlist
+  - Dynamic Banners & Promotional Sliders
+  - Full Admin Dashboard with live stats, orders, customers, delivery zones, and store settings
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🛠️ Local Development Setup
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **Clone & Install Dependencies**:
+   ```bash
+   composer install
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. **Environment Configuration**:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   *Note: In `.env`, `DB_CONNECTION=sqlite` is already configured.*
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. **Database Migration & Seeding**:
+   The project includes a ready-to-use seeded SQLite database at `database/database.sqlite`. If you need to re-run migrations from scratch:
+   ```bash
+   php artisan migrate:fresh --seed
+   ```
 
-## Laravel Sponsors
+4. **Run Local Server**:
+   ```bash
+   php artisan serve
+   ```
+   Visit `http://localhost:8000` in your browser.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+5. **Run Automated Tests**:
+   ```bash
+   php artisan test
+   ```
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 🌐 Hostinger Deployment
 
-## Contributing
+See [HOSTINGER_DEPLOYMENT.md](file:///c:/Users/SIMRAN/OneDrive/Desktop/Nayanmart/HOSTINGER_DEPLOYMENT.md) for full instructions.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Quick Deployment Summary:
+1. **Upload** files to Hostinger `public_html` or domain directory.
+2. **File Permissions (Crucial for SQLite write operations)**:
+   ```bash
+   chmod 775 database
+   chmod 664 database/database.sqlite
+   chmod -R 775 storage bootstrap/cache
+   ```
+3. **Run Migrations & Caches**:
+   ```bash
+   php artisan migrate --force
+   php artisan storage:link
+   php artisan config:cache
+   php artisan route:cache
+   php artisan view:cache
+   ```
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🔐 Default Credentials
 
-## Security Vulnerabilities
+| Role | Email | Password | Access URL |
+|------|-------|----------|------------|
+| **Admin** | `admin@nayanmart.com` | `admin123` | `/admin` |
+| **Customer** | `skrousonali2024@gmail.com` | `password123` | `/login` |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📄 License
+The application is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).

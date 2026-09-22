@@ -6,9 +6,12 @@
 <div class="container" style="padding: 40px 16px;">
   <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-lg); max-width: 440px; margin: 0 auto; padding: 36px; box-shadow: var(--shadow-sm);">
     
-    <div style="text-align: center; margin-bottom: 24px;">
-      <h2 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">Sign In to Nayan Mart</h2>
-      <p style="color: var(--text-muted); font-size: 13px;">Manage your orders, addresses, and wishlist</p>
+    <div style="text-align: center; margin-bottom: 22px;">
+      <a href="{{ route('home') }}" style="display: inline-block;">
+        <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" style="width: 76px; height: 76px; object-fit: contain; border-radius: 50%; margin: 0 auto 12px; display: block; box-shadow: 0 4px 16px rgba(15, 122, 63, 0.18);">
+      </a>
+      <h2 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">Sign In to Nayan Mart</h2>
+      <p style="color: var(--text-muted); font-size: 13px;">আপনার প্রতিদিনের বাজার • Manage your account & orders</p>
     </div>
 
     <!-- Pre-filled test credentials helper box for instant testing -->

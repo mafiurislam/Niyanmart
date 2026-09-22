@@ -13,13 +13,16 @@
   </nav>
 
   <div class="order-success-card">
-    <!-- Success Icon (Matching Image 4) -->
-    <div class="success-check-icon">
-      <i class="bi bi-check-lg"></i>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" style="width: 58px; height: 58px; object-fit: contain; border-radius: 50%; box-shadow: 0 2px 10px rgba(15, 122, 63, 0.18);">
+      <!-- Success Icon -->
+      <div class="success-check-icon" style="margin: 0;">
+        <i class="bi bi-check-lg"></i>
+      </div>
     </div>
 
     <h1 style="font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">Your order is completed!</h1>
-    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px;">Thank you. Your Order has been received.</p>
+    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px;">Thank you for shopping with Nayan Mart. Your order has been received.</p>
 
     <!-- Yellow Order Summary Card (Matching Image 4) -->
     <div class="order-yellow-badge-box">

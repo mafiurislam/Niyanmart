@@ -31,11 +31,14 @@
 
   <div class="invoice-box">
     <div class="header-row">
-      <div class="logo">
-        <h1>Nayan Mart</h1>
-        <p>“আপনার ঘরের বাজার, এখন হাতের মুঠোয়”</p>
-        <p>Quality Products • Best Price • Fast Delivery</p>
-        <p>Phone: {{ \App\Models\Setting::get('phone', '7550807912') }} | Email: {{ \App\Models\Setting::get('email', 'skrousonali2024@gmail.com') }}</p>
+      <div class="logo" style="display: flex; align-items: center; gap: 16px;">
+        <img src="{{ asset('assets/images/logo.png') }}" alt="Nayan Mart" style="width: 72px; height: 72px; object-fit: contain; border-radius: 50%; flex-shrink: 0;">
+        <div>
+          <h1>Nayan Mart</h1>
+          <p>“আপনার প্রতিদিনের বাজার, এখন হাতের মুঠোয়”</p>
+          <p>Quality Products • Best Price • Fast Delivery</p>
+          <p>Phone: {{ \App\Models\Setting::get('phone', '7550807912') }} | Email: {{ \App\Models\Setting::get('email', 'skrousonali2024@gmail.com') }}</p>
+        </div>
       </div>
       <div class="invoice-meta">
         <h2>TAX INVOICE</h2>
